@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    /*width: 50%; */
+    font-weight: 400; /*sets a normally bolded h1 to be a normal font */
+    text-decoration: blue underline dotted;
+    letter-spacing: 5px;
+    font-size: 80px;
+    font-family: verdana;
+}
+
+p {
+    line-height: 2;
+}
+
+a {
+    text-decoration: none; /*remove underline from hyperlinks */
+}

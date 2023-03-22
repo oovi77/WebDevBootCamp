@@ -1,0 +1,55 @@
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: magenta;
+
+    /* transition: 1s; // right now we are setting the transition time for everything
+    but we can single it out to a single property */
+
+    /*transition: background-color 1s  //this only effects the background-color
+    and the border change happens instantaneously like before*/
+
+    /*transition: all 1s 2s //this effects all properties and the 2s represents a
+    delay, so the transition will take 1s to happen and 2s to start happening*/
+
+    /*can also do multiple properties with different timings */
+
+    transition: background-color 1s, border-radius 2s;
+
+}
+
+.circle:hover {
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+section div {
+    height: 100px;
+    width: 100px;
+    background-color: turquoise;
+    margin: 20px 0;
+    transition: margin-left 3s;
+}
+
+section:hover div {
+    margin-left: 500px;
+}
+
+/*giving each div a different timing function */
+
+div:nth-of-type(1) {
+    transition-timing-function: ease-in;
+}
+
+div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+
+div:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+
+div:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}

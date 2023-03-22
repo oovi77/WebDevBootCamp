@@ -1,0 +1,76 @@
+h1 {
+    background-color: #2a9d8f;
+    border: 5px solid #264653;
+    color: #eae2b7;
+    padding: 0.7em;
+    width: 300px;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+h1:nth-of-type(2n) {
+    background-color: #e9c46a;
+}
+h1:nth-of-type(3n) {
+    background-color: #f4a261;
+}
+h1:nth-of-type(4n) {
+    background-color: #e76f51;
+}
+
+
+section:first-of-type h1:nth-of-type(1) {
+    /* transform-origin: bottom right; when we rotate we rotate currently
+    around the middle of the element, we can change that with transform-origin*/
+
+    transform: rotate(45deg); /*rotates the element 45 degrees */
+}
+
+section:first-of-type h1:nth-of-type(2) {
+
+
+    transform: scale(2); /*double it by a factor of 2*/
+
+    /*can also pass in two numbers for effecting the x and y axis */
+    transform: scale(0.5, 2);
+
+    transform: scale(0.5); /*shrink it by a factor of 0.5*/
+}
+
+section:first-of-type h1:nth-of-type(3) {
+
+    transform: translateX(200px); /*moves the element 200px to the right */
+}
+
+section:first-of-type h1:nth-of-type(4) {
+    transform: translate(-200px, -100px); /*moves the element 200px to the left
+    and 100px up */
+}
+
+section:nth-of-type(2) h1:nth-of-type(1) {
+    transform: skew(30deg); /*skews the element */
+}
+
+section:nth-of-type(2) h1:nth-of-type(2) {
+    transform: skew(10deg, 5deg); /*skews the element */
+}
+
+/*can stack / combine all the transforms we were doing into one */
+
+section:nth-of-type(2) h1:nth-of-type(3) {
+    transform: rotate(-20deg) scale(1.2) /*rotate then scale the element */
+}
+
+section:nth-of-type(2) h1:nth-of-type(4) {
+    transform: translateX(-500px) rotate(0.5turn) scaleY(1.5);
+}
+
+
+/*important to note that everything we do on the parent element effects the
+elements inside the parent(the children) */
+section:nth-of-type(2) {
+    transform: scale(0.7) translateX(500px); 
+}

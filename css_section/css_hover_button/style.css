@@ -16,7 +16,7 @@ button {
     padding: 1em 2em;
     font-size: 1em;
     background-color: #151b29; 
-    display: none;
+    
 
     /*adding 0.25s of time in between the hover effect */
     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;

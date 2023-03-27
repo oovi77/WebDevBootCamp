@@ -1,0 +1,106 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/*writing some media queries to make the nav and text more responsive */
+
+/*max-width 768px comes from some common break points that are used
+by everyone, as well as playing with the window of our HTML page and 
+seeing where it would be nice to make the text smaller so it stays
+on one line.
+
+    320px — 480px: Mobile devices
+    481px — 768px: iPads, Tablets
+    769px — 1024px: Small screens, laptops
+    1025px — 1200px: Desktops, large screens
+    1201px and more —  Extra large screens, TV  */
+
+
+/* */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    nav, nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+
+
+/*
+@media (max-width: 800px) { 
+    h1 {
+        color: red;
+    }
+}
+
+@media (max-width: 700px) { 
+    h1 {
+        color: green;
+    }
+}
+
+@media (max-width: 500px) { 
+    h1 {
+        color: purple;
+    }
+} */
+
+
+
+
+
+/* @media (min-width: 800px) { 
+    h1 {
+        color: orange;
+    }
+}
+
+@media (min-width: 600px) { 
+    h1 {
+        color: pink;
+    }
+}
+
+@media (min-width: 400px) { 
+    h1 {
+        color: teal;
+    }
+} */
